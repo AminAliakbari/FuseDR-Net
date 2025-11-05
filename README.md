@@ -35,7 +35,7 @@ The URL of preprocessed, ready-to-use TJU dataset is as follows:
 
 TJU dataset: https://github.com/wang-fujin/PINN4SOH/tree/main/data/TJU%20data/Dataset_3_NCM_NCA_battery.
 
-notation: The raw TJU dataset can be obtained from the Zenodo database under accession code: https://doi.org/10.5281/zenodo.6379165
+Note: The raw TJU dataset can be obtained from the Zenodo database under accession code: https://doi.org/10.5281/zenodo.6379165
 
 ## Training and Ecaluation
 
@@ -110,5 +110,6 @@ If you find our work useful in your research, please consider citing:
 
 his code is released under the MIT license, see LICENSE.md for details.
 
+## Contact info
 
 If you had any difficaluties or questions feel free to cantact me via amin_aliakbari@alumni.iust.ac.ir
