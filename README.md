@@ -74,9 +74,9 @@ Note 1: The raw TJU dataset can be obtained from the Zenodo database under acces
 
 4- Modify the "Helper_Plot.py" to suit each dataset.
 
-## Training and Ecaluation
+## Training and Evaluation
 
-- an example for train and evaluate a new model：
+- an example for training and evaluation of a new model：
 
 ```bash
 python Decomposed_HIs_RUL_Prediction_FuseDR_Net.py
