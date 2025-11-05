@@ -1,6 +1,6 @@
 ## FuseDR-Net: a fusion-based network for battery remaining useful life prediction using causally decomposed health indicators
 
-This repository contains the codes for our paper, published in Energy Conversion and Managment: X
+This repository contains the codes for our paper, published in Energy Conversion and Management: X
 
 DOI: https://doi.org/10.1016/j.ecmx.2025.101341
 
@@ -39,16 +39,16 @@ TJU dataset: https://github.com/wang-fujin/PINN4SOH/tree/main/data/TJU%20data/Da
 
 Note 1: The raw TJU dataset can be obtained from the Zenodo database under accession code: https://doi.org/10.5281/zenodo.6379165
 
-## Prepration
+## Preparation
 
-1- place the datasets in the following pathes: 
+1- place the datasets in the following paths: 
 
     NASA: .\data\NASA data\data
     
     TJU: .\data\TJU data\Dataset_3_NCM_NCA_battery
 
 
-2- dataset prepration:
+2- dataset preparation:
 
     - For NASA dataset:
     
@@ -133,7 +133,7 @@ If you find our work useful in your research, please consider citing:
 ```latex
 @article{َALIAKBARI2025101341,
     title = {FuseDR-Net: a fusion-based network for battery remaining useful life prediction using causally decomposed health indicators},
-    journal = {Energy Conversion and Managment : X},
+    journal = {Energy Conversion and Management : X},
     volume = {28},
     pages = {101341},
     year = {2025},
