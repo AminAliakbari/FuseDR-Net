@@ -41,14 +41,14 @@ Note 1: The raw TJU dataset can be obtained from the Zenodo database under acces
 
 ## Prepration
 
-1-- place the datasets in the following pathes: 
+1- place the datasets in the following pathes: 
 
     NASA: .\data\NASA data\data
     
     TJU: .\data\TJU data\Dataset_3_NCM_NCA_battery
 
 
-2-- dataset prepration:
+2- dataset prepration:
 
     - For NASA dataset:
     
@@ -63,7 +63,7 @@ Note 1: The raw TJU dataset can be obtained from the Zenodo database under acces
           2- RUN "TJUDataPreProcess.py" to create numpy version of the dataset.
 
           
-3-- Here is a critical note: The training scripts has been tuned for the NASA dataset. Therefore, to generate results on TJU dataset, make sure to set the args. correctly and change the following lines:
+3- Here is a critical note: The training scripts has been tuned for the NASA dataset. Therefore, to generate results on TJU dataset, make sure to set the args. correctly and change the following lines:
 
         from NASADataPreProcess import MultiVariateBatteryDataProcess ---> from TJUDataPreProcess import MultiVariateBatteryDataProcess
         
@@ -124,7 +124,7 @@ Run 1: MAE=0.0070, RMSE=0.0104, R2=0.9939, RUL_real=73, RUL_pred=72, AE=1, RE=0.
 
 ## Acknowledgments
 
-Work and Code is inspired by https://github.com/USTC-AI4EEE/RUL-Mamba.
+Work and Code are inspired by https://github.com/USTC-AI4EEE/RUL-Mamba.
 
 ## Citation
 
