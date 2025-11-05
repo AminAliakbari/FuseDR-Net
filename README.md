@@ -137,7 +137,7 @@ If you find our work useful in your research, please consider citing:
     volume = {28},
     pages = {101341},
     year = {2025},
-    issn = {2352-152X},
+    issn = {2590-1745},
     doi = {https://doi.org/10.1016/j.ecmx.2025.101341},
     url = {https://www.sciencedirect.com/science/article/pii/S2590174525004738},
     author = {Amin Aliakbari and Masoud Masih-Tehrani},
