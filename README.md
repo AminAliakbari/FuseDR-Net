@@ -41,14 +41,14 @@ Note 1: The raw TJU dataset can be obtained from the Zenodo database under acces
 
 ## Prepration
 
-1- place the datasets in the following pathes: 
+1-- place the datasets in the following pathes: 
 
-NASA: .\data\NASA data\data
+    NASA: .\data\NASA data\data
+    
+    TJU: .\data\TJU data\Dataset_3_NCM_NCA_battery
 
-TJU: .\data\TJU data\Dataset_3_NCM_NCA_battery
 
-
-2- dataset prepration:
+2-- dataset prepration:
 
     - For NASA dataset:
     
@@ -63,16 +63,16 @@ TJU: .\data\TJU data\Dataset_3_NCM_NCA_battery
           2- RUN "TJUDataPreProcess.py" to create numpy version of the dataset.
 
           
-3- Here is a critival note: The training scripts has been tuned for the NASA dataset. For generating results on TJU dataset, make sure to set the args. correctly and change the following lines:
+3-- Here is a critical note: The training scripts has been tuned for the NASA dataset. Therefore, to generate results on TJU dataset, make sure to set the args. correctly and change the following lines:
 
-    from NASADataPreProcess import MultiVariateBatteryDataProcess ---> from TJUDataPreProcess import MultiVariateBatteryDataProcess
-    
-    BatteryData = np.load('data/NASA data/NASA_dataset.npy', allow_pickle=True).item() ---> BatteryData = np.load('data/TJU data/TJU_dataset.npy', allow_pickle=True).item()
+        from NASADataPreProcess import MultiVariateBatteryDataProcess ---> from TJUDataPreProcess import MultiVariateBatteryDataProcess
+        
+        BatteryData = np.load('data/NASA data/NASA_dataset.npy', allow_pickle=True).item() ---> BatteryData = np.load('data/TJU data/TJU_dataset.npy', allow_pickle=True).item()
     
     Note: The SPs must be set correctly in the whole script. for NASA it must be (50, 70, 90) and for TJU it must be (200, 300, 400) to regenerate the results of the paper.
 
 
-4- Modify the "Helper_Plot.py" to suit each dataset.
+4-- Modify the "Helper_Plot.py" to suit each dataset.
 
 ## Training and Ecaluation
 
