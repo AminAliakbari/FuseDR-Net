@@ -108,7 +108,7 @@ If you find our work useful in your research, please consider citing:
 ```
 ## License
 
-his code is released under the MIT license, see LICENSE.md for details.
+his code is released under the MIT license, see LICENSE for details.
 
 ## Contact info
 
