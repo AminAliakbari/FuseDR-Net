@@ -145,7 +145,7 @@ If you find our work useful in your research, please consider citing:
 ```
 ## License
 
-his code is released under the MIT license, see LICENSE for details.
+This code is released under the MIT license, see LICENSE for details.
 
 ## Contact info
 
