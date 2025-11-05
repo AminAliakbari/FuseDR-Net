@@ -72,7 +72,7 @@ Note 1: The raw TJU dataset can be obtained from the Zenodo database under acces
     Note: The SPs must be set correctly in the whole script. for NASA it must be (50, 70, 90) and for TJU it must be (200, 300, 400) to regenerate the results of the paper.
 
 
-4-- Modify the "Helper_Plot.py" to suit each dataset.
+4- Modify the "Helper_Plot.py" to suit each dataset.
 
 ## Training and Ecaluation
 
