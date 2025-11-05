@@ -10,22 +10,24 @@ Accurate prediction of the remaining useful life (RUL) of lithium-ion batteries 
 
 ## Requirements
 
-The version of python is 3.12.8 .
+The python version 3.12.8 was used for this project.
 ```bash
-numpy==1.21.6
-numba==0.55.1
-matplotlib==3.3.4
-scipy==1.8.0
-statsmodels==0.13.5
-pytorch-lightning==1.9.5
-pytorch-forecasting==0.10.3
-sympy==1.12.1
-reformer_pytorch==1.4.4
-openpyxl==3.1.5
-einops==0.8.0
+torch==2.5.1+cu124
+einops==0.8.1
+lightning==2.5.1.post0
+matplotlib==3.10.0
+numpy==1.26.3
+pandas==2.2.3
+pytorch-forecasting==1.3.0
+pytorch-wavelets==1.3.0
+PyYAML==6.0.2
+reformer-pytorch==1.4.4
+scikit-learn==1.6.1
+scipy==1.15.2
+torchmetrics==1.7.1
 ```
 
-## 3.Datasets
+## Datasets
 
 The raw NASA Battery Dataset can be obtained from this URL:
 
@@ -35,7 +37,28 @@ The URL of preprocessed, ready-to-use TJU dataset is as follows:
 
 TJU dataset: https://github.com/wang-fujin/PINN4SOH/tree/main/data/TJU%20data/Dataset_3_NCM_NCA_battery.
 
-Note: The raw TJU dataset can be obtained from the Zenodo database under accession code: https://doi.org/10.5281/zenodo.6379165
+Note 1: The raw TJU dataset can be obtained from the Zenodo database under accession code: https://doi.org/10.5281/zenodo.6379165
+
+## Prepration
+
+1- place the datasets in the following pathes: 
+NASA: .\data\NASA data\data
+TJU: .\data\TJU data\Dataset_3_NCM_NCA_battery
+
+2- dataset prepration:
+    - For NASA dataset:
+          1- Run "NASA_Feature_Extraction.py" to extract needed battery HIs.
+          2- Run "NASADataPreProcess.py" to create numpy version of the dataset.
+    - For TJU dataset:
+          1- Thanks to (Wang et al. 2024) ready-to-use TJU dataset can be obtained from the mentioned URL.
+          2- RUN "TJUDataPreProcess.py" to create numpy version of the dataset.
+
+3- Here is a critival note: The training scripts has been tuned for the NASA dataset. For generating results on TJU dataset, make sure to set the args. correctly and change the following lines:
+    from NASADataPreProcess import MultiVariateBatteryDataProcess ---> from TJUDataPreProcess import MultiVariateBatteryDataProcess
+    BatteryData = np.load('data/NASA data/NASA_dataset.npy', allow_pickle=True).item() ---> BatteryData = np.load('data/TJU data/TJU_dataset.npy', allow_pickle=True).item()
+    Note: The SPs must be set correctly in the whole script. for NASA it must be (50, 70, 90) and for TJU it must be (200, 300, 400) to regenerate the results of the paper.
+
+4- Modify the "Helper_Plot.py" to suit each dataset.
 
 ## Training and Ecaluation
 
